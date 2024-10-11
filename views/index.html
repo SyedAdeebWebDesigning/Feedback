@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CoderOne Feedback Form</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+				font-family: Arial, sans-serif;
+			}
+
+			body {
+				background-color: #f4f4f4;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background-image: radial-gradient(circle, #dfdfdf 1px, transparent 1px);
+				background-size: 20px 20px;
+				height: 100vh;
+			}
+
+			.form-container {
+				background-color: #ffffff;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				width: 400px;
+			}
+
+			h2 {
+				text-align: center;
+				color: #333;
+				margin-bottom: 20px;
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+			}
+
+			label {
+				font-size: 16px;
+				color: #333;
+				margin-bottom: 5px;
+			}
+
+			input,
+			textarea {
+				padding: 10px;
+				margin-bottom: 20px;
+				border-radius: 5px;
+				border: 1px solid #ddd;
+				width: 100%;
+				font-size: 16px;
+			}
+
+			textarea {
+				resize: none;
+				height: 100px;
+			}
+
+			input:focus,
+			textarea:focus {
+				outline: none;
+				border-color: #007bff;
+				box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+			}
+
+			button {
+				padding: 12px;
+				background-color: #007bff;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				font-size: 16px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			button:hover {
+				background-color: #0056b3;
+			}
+
+			@media (max-width: 500px) {
+				.form-container {
+					width: 90%;
+				}
+			}
+
+			footer {
+				text-align: center;
+				padding: 10px;
+				position: absolute;
+				bottom: 0;
+				color: #888;
+				font-size: 14px;
+			}
+
+			.span-name a {
+				color: #007bff;
+				text-decoration: none;
+			}
+
+			.span-name a:hover {
+				color: #007bff;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="form-container">
+			<h2>CoderOne Feedback Form</h2>
+			<form action="/submit-feedback" method="post">
+				<label for="name">Name: </label>
+				<input
+					type="text"
+					id="name"
+					name="name"
+					placeholder="Your full name"
+					required />
+
+				<label for="contactNumber">Contact Number:</label>
+				<input
+					type="number"
+					id="contactNumber"
+					name="contactNumber"
+					placeholder="Your contact number"
+					required />
+
+				<label for="email">Email:</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Your email address"
+					required />
+
+				<label for="feedback">Describe your feedback:</label>
+				<textarea
+					name="feedback"
+					id="feedback"
+					required
+					placeholder="Please provide your feedback here"></textarea>
+
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<footer>
+			<p>
+				Made by
+				<span class="span-name">
+					<a href="https://syedadeeb.vercel.app/" target="_blank">Syed Adeeb</a>
+				</span>
+			</p>
+		</footer>
+	</body>
+</html>
